@@ -17,5 +17,5 @@ fn check_hash(key: &str) -> bool { !md5_hash(key).starts_with("000000") }
 
 /// Continually hashes keys until the first key succeeds the `check_hash()` function.
 fn get_answer(input: &str) -> usize {
-    (1..).skip_while(|x| check_hash(&format!("{}{:05}", input, x);)).take(1).next().unwrap()
+    (1..).skip_while(|x| check_hash(&format!("{}{:05}", input, x))).take(1).next().unwrap()
 }
